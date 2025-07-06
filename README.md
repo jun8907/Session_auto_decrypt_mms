@@ -9,6 +9,7 @@
 ```bash
 git clone https://github.com/jun8907/Session_auto_descrypt_mms.git
 cd Session_auto_descrypt_mms
+pip install -r requirements.txt
 python pull.py
 python decrypt_mms_files.py
 ```

@@ -1,7 +1,7 @@
 import os
 import base64, hmac, hashlib
 from Crypto.Cipher import AES
-from descrypt_key import get_sqlcipher_key
+from decrypt_key import get_sqlcipher_key
 from modernkey import get_modernkey_base64
 from data_random import get_data_randoms
 import magic  
@@ -33,7 +33,8 @@ def get_file_extension(decrypted_data):
     'application/vnd.ms-powerpoint': '.ppt',
     'application/vnd.openxmlformats-officedocument.presentationml.presentation': '.pptx',
     'application/x-hwp': '.hwp',
-    'text/plain': '.txt',    
+    'text/plain': '.txt',
+    'audio/aac': '.aac',    
     'video/mp4': '.mp4',
     'video/quicktime': '.mov'
     }
@@ -58,7 +59,7 @@ if __name__ == "__main__":
         exit(1)
 
     mms_dir = "mms_files"
-    des_dir = "des_mms_files"
+    des_dir = "dec_mms_files"
     os.makedirs(des_dir, exist_ok=True)
 
     data_random_list = get_data_randoms("extracted_files/session.db", sqlcipher_key, mms_dir)

@@ -1,4 +1,4 @@
-# Session_auto_descrypt_mms 🔐
+# Session_auto_decrypt_mms 🔐
 
 복호화되지 않은 Session .mms 임시파일을 복호화하는 코드입니다.
 
@@ -7,8 +7,8 @@
 ## 🧪 사용법
 
 ```bash
-git clone https://github.com/jun8907/Session_auto_descrypt_mms.git
-cd Session_auto_descrypt_mms
+git clone https://github.com/jun8907/Session_auto_decrypt_mms.git
+cd Session_auto_decrypt_mms
 pip install -r requirements.txt
 python pull.py
 python decrypt_mms_files.py
@@ -34,10 +34,10 @@ pip install python-magic-bin
 - preferences_database.py
 - persistent.py
 - modernkey.py
-- descrypt_key.py
+- decrypt_key.py
 - data_random.py
 - aes_key.py
-- descrypt_mms_files.py
+- decrypt_mms_files.py
 <br><br>
 ### pull.py
 
@@ -143,18 +143,18 @@ modernKey, data_random, 그리고 HMAC-SHA256 알고리즘을 통해 각 파일�
  - part1311447108672342993.mms → AES Key: 9306eecbf678bcadfca8bda93992c6c00534ce390ca7f054e953f0b9e79066d3
 ```
 <br><br>
-### descrypt_mms_files.py
+### decrypt_mms_files.py
 
 Session 메신저의 암호화된 `.mms` 첨부파일을 자동으로 복호화하여 원본 이미지, 문서 파일(.jpg, .png, .doc, .docx, .hwp, .pdf ...)로 복원해주는 코드입니다.
 
-복원된 원본 이미지 파일은 des_mms_files/ 디렉터리에 저장
+복원된 원본 이미지 파일은 dec_mms_files/ 디렉터리에 저장
 
 ```python
 [실행 결과]
 [+] 총 4개 .mms 파일 복호화 중...
-[+] part5987799258691517169.mms → 복호화 완료 → des_mms_files\part5987799258691517169.mms.jpg
-[+] part2279796186127612959.mms → 복호화 완료 → des_mms_files\part2279796186127612959.mms.jpg
-[+] part6948537578243099421.mms → 복호화 완료 → des_mms_files\part6948537578243099421.mms.docx
-[+] part1311447108672342993.mms → 복호화 완료 → des_mms_files\part1311447108672342993.mms.docx
+[+] part5987799258691517169.mms → 복호화 완료 → dec_mms_files\part5987799258691517169.mms.jpg
+[+] part2279796186127612959.mms → 복호화 완료 → dec_mms_files\part2279796186127612959.mms.jpg
+[+] part6948537578243099421.mms → 복호화 완료 → dec_mms_files\part6948537578243099421.mms.docx
+[+] part1311447108672342993.mms → 복호화 완료 → dec_mms_files\part1311447108672342993.mms.docx
 ```
 
